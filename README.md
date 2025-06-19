@@ -1,7 +1,7 @@
 # SeniorSolarSprintSimulations
 SeniorSolarSprintSimulations Designed by Vivaan Rochlani - Ravenwood High School
 
-Hi there! This is Vivaan and I am here to walk you through how to clone and implement this simulation on your end. It is a monte-carlo based  
+Hi there! This is Vivaan and I am here to walk you through how to clone and implement this simulation on your end. It is a monte-carlo based simulation on fortran, a low-level language that is known for its mathematical accuracy and high speed.
 
 First, you want to start by downloading the release. This can be found on the right side of the screen on the gitbhub repository.
 
