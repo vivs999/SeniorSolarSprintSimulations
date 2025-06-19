@@ -1,8 +1,4 @@
 # SeniorSolarSprintSimulations
-Here is your cleaned-up and professional GitHub README, with all emojis removed:
-
-⸻
-
 SeniorSolarSprintSimulations
 
 Author: Vivaan Rochlani – Ravenwood High School
@@ -19,10 +15,11 @@ Getting Started
 
 1. Clone or Download the Project
 
-To get started, download the latest release from the Releases section on the right-hand side of this GitHub page. Alternatively, you can clone the repository:
+To get started, download the latest release from the Releases section on the right-hand side of this GitHub page. Alternatively, you can clone the repository : 
 
-git clone https://github.com/yourusername/SeniorSolarSprintSimulations.git
-
+```	
+git clone https://github.com/vivs999/SeniorSolarSprintSimulations.git
+```
 
 ⸻
 
@@ -31,13 +28,16 @@ git clone https://github.com/yourusername/SeniorSolarSprintSimulations.git
 You’ll need a Fortran compiler that supports OpenMP. The recommended compiler is GFortran, which is free and cross-platform.
 
 For macOS (via Homebrew):
-
+```
 brew install gcc
+```
 
 Compatible Compilers
 	•	gfortran (recommended, supports OpenMP with -fopenmp)
 	•	ifort / ifx (Intel Fortran Compilers, use -qopenmp)
 	•	nvfortran / cudafor (for CUDA acceleration, advanced use)
+
+ You can use any compiler, make sure it is compatible with openmp. To install Gfortran on windows make sure to install MinGW-w64 as well.
 
 ⸻
 
@@ -50,8 +50,8 @@ Editable Parameters
 wheel_diameter, num_threads, num_iterations, MAX_SIMULATION_TIME, 
 MIN_SPEED_THRESHOLD, STAGNATION_CHECKS, stall_torque, free_speed_rpm, 
 current_input, motor_efficiency, voltage_input, bearing_count, 
-distance_remaining, time_step, mass, gear_ratio, rho, Cd, A, 
-mu_bearing (range), mu_rolling (range), motor_rpm_max (range), 
+distance_remaining, time_step, mass, gear_ratio, gear_effiency, rho, Cd, A, 
+mu_bearing (range),  mu_rolling (range), motor_rpm_max (range), 
 motor_torque_stall (range), power_margin (percentage), 
 F_touch (value and contact chance logic)
 
@@ -66,12 +66,16 @@ Important Notes:
 
 Navigate to the directory containing the .f90 file using your terminal:
 
+```
 cd path/to/project
+```
 
 Compile and run using:
 
-gfortran -fopenmp SeniorSolarSprintSimulations.f90 -o solar_sim
-./solar_sim
+```
+gfortran -fopenmp SeniorSolarSprintSimulations.f90 -o executableNameHere
+./executableNameHere
+```
 
 If you’re using ifort or ifx, replace -fopenmp with -qopenmp.
 
