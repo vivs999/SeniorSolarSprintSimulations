@@ -1,41 +1,106 @@
 # SeniorSolarSprintSimulations
-SeniorSolarSprintSimulations Designed by Vivaan Rochlani - Ravenwood High School
+Here is your cleaned-up and professional GitHub README, with all emojis removed:
 
-Hi there! This is Vivaan and I am here to walk you through how to clone and implement this simulation on your end. It is a monte-carlo based simulation on fortran, a low-level language that is known for its mathematical accuracy and high speed.
+⸻
 
-First, you want to start by downloading the release. This can be found on the right side of the screen on the gitbhub repository.
+SeniorSolarSprintSimulations
 
-Then, you need to install your favorite fortran compiler. I personally use Gfortran, but you can use any such as ifort, ifx or cudafort. Gfortran is a free compiler and works on Mac, Windows and Linux, and can be easily installed using a package compiler such as homebrew. To install it use this command in your terminal.
+Author: Vivaan Rochlani – Ravenwood High School
+Project: Monte Carlo Simulation of a Solar Car in Fortran
 
-```
+Welcome! This repository contains a high-performance Monte Carlo simulation written in Fortran, designed to evaluate the performance of solar-powered sprint cars by modeling dynamic physical parameters. Fortran is chosen for its mathematical precision and computational speed, especially in physics-heavy simulations like this.
+
+**WARNING** 
+These simulations do not claim to be accurate and the creater, Vivaan Rochlani, takes no legal responsibility for innacurate or unwanted results.
+
+⸻
+
+Getting Started
+
+1. Clone or Download the Project
+
+To get started, download the latest release from the Releases section on the right-hand side of this GitHub page. Alternatively, you can clone the repository:
+
+git clone https://github.com/yourusername/SeniorSolarSprintSimulations.git
+
+
+⸻
+
+2. Install a Fortran Compiler
+
+You’ll need a Fortran compiler that supports OpenMP. The recommended compiler is GFortran, which is free and cross-platform.
+
+For macOS (via Homebrew):
+
 brew install gcc
-```
 
-Next, you want to edit the Fortran file to fit your parameters. To edit the file, you will need to use a text editor. Some examples are Visual Studio Code (what I personally use), Emacs, Vim, or just regular notepad (or text-editor if you are on MacOs). The variables you will need to edit are as follows : 
+Compatible Compilers
+	•	gfortran (recommended, supports OpenMP with -fopenmp)
+	•	ifort / ifx (Intel Fortran Compilers, use -qopenmp)
+	•	nvfortran / cudafor (for CUDA acceleration, advanced use)
 
-wheel_diameter, num_threads, num_iterations, MAX_SIMULATION_TIME, MIN_SPEED_THRESHOLD, STAGNATION_CHECKS, stall_torque, free_speed_rpm, current_input, motor_efficiency, voltage_input, wheel_diameter, bearing_count, distance_remaining, time_step, mass, gear_ratio, rho, Cd, A, mu_bearing (range), mu_rolling (range), motor_rpm_max (range), motor_torque_stall (range), power_margin (percentage), F_touch (value and contact chance logic)
+⸻
 
-**IMPORTANT** make sure you edit the *num_threads* to allocate the maximum number of cores you are comfortable alloting on your computer. The computation speed relies on the speed and the number of cores that you will give it due to its monte-carlo nature. Additionally, you can modify *num_iterations* to reduce or increase the monte-carlo sweeps conducted based on your computer specs. The default is 100,000, which will run slow on some slower computers.
+3. Edit Simulation Parameters
 
-After editing all of your variables and ensuring openmp is stable, run your code. This is run in your terminal window. In Visual Studio, that is right below the text file. On other editors, you may need to navigate to the directory using cd from your root or home folder all the way to where the fortran .f90 file is stored. Below is how you will do so in your terminal.
+Open the .f90 file in your favorite text editor (e.g., Visual Studio Code, Emacs, Vim, or even Notepad). You can customize the simulation to reflect your car’s specifications.
 
-```
-cd foldername
-```
+Editable Parameters
 
-To run it use these commands below 
+wheel_diameter, num_threads, num_iterations, MAX_SIMULATION_TIME, 
+MIN_SPEED_THRESHOLD, STAGNATION_CHECKS, stall_torque, free_speed_rpm, 
+current_input, motor_efficiency, voltage_input, bearing_count, 
+distance_remaining, time_step, mass, gear_ratio, rho, Cd, A, 
+mu_bearing (range), mu_rolling (range), motor_rpm_max (range), 
+motor_torque_stall (range), power_margin (percentage), 
+F_touch (value and contact chance logic)
 
-```
-gfrotran -fopenmp SeniorSolarSprintSimulations.f90 -o executableNameHere
-./executableNameHere
-```
+Important Notes:
+	•	Adjust num_threads based on how many CPU cores you’re willing to allocate.
+	•	Increase or decrease num_iterations for a tradeoff between precision and speed.
+	•	Ensure OpenMP is properly installed and supported by your compiler.
 
-Congratulations! Now tinker until you reach your fastest speeds. If you need help finding the values from your current vehicle, use Chat-GPT or another llm, as they can help determine the friction and other values present. If you need any help reach me below :
+⸻
 
+4. Compile and Run
 
-```
-Vivaan Rochlani
-rochlanivivaan@gmail.com
-+1 629-262-2636
-```
+Navigate to the directory containing the .f90 file using your terminal:
 
+cd path/to/project
+
+Compile and run using:
+
+gfortran -fopenmp SeniorSolarSprintSimulations.f90 -o solar_sim
+./solar_sim
+
+If you’re using ifort or ifx, replace -fopenmp with -qopenmp.
+
+⸻
+
+Output
+
+The simulation will print:
+	•	Average travel time and final speed
+	•	Maximum and minimum recorded speeds
+	•	Failed vs successful test counts
+	•	Total number of simulation iterations
+
+⸻
+
+Additional Guidance
+
+You can use language models (like ChatGPT) or other tools to help estimate unknown physical parameters, such as:
+	•	Friction coefficients
+	•	Drag area
+
+These estimates can help better tailor the simulation to your specific vehicle setup.
+
+⸻
+
+Contact
+
+For support or inquiries, please contact:
+
+Vivaan Rochlani  
+rochlanivivaan@gmail.com  
++1 (629) 262-2636
